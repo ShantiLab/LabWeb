@@ -1764,8 +1764,8 @@ nav.main-menu ul.menu li ul.mega-submenu li > a > span:before {
 /* ===============================================
     Page-Title-Row
 ------------------------*/
-.ttm-page-title-row { 
-    background: url(../images/ttm-pagetitle-bg.jpg);
+.ttm-page-title-row-team { 
+    background: url(../images/ttm-pagetitle-bg1.jpg);
     width: 100%;
     background-size: cover;
     background-position: center;
