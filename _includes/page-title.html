@@ -1,0 +1,19 @@
+{%- comment -%}
+  Page title banner with breadcrumb.
+  include.title  – heading text (defaults to page.title)
+  include.parent / include.parent_url – optional middle breadcrumb
+  include.image – optional background photo
+{%- endcomment -%}
+{%- assign t = include.title | default: page.title -%}
+<section class="page-title{% if include.image %} has-image{% endif %}"{% if include.image %} style="--banner: url('{{ include.image | relative_url }}')"{% endif %}>
+  <div class="container">
+    <h1>{{ t }}</h1>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      {%- if include.parent %}
+      <a href="{{ include.parent_url | relative_url }}">{{ include.parent }}</a>
+      {%- endif %}
+      <span aria-current="page">{{ t }}</span>
+    </nav>
+  </div>
+</section>

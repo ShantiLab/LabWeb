@@ -1,0 +1,80 @@
+# Site settings. After editing this file, restart `bundle exec jekyll serve`.
+
+title: Srivastava Lab
+short_title: SSS Lab
+tagline: Structural Biology at IISER Berhampur
+description: >-
+  The Srivastava Lab at IISER Berhampur studies the structure and function of
+  biomolecules using cryo-EM and X-ray crystallography, to understand their roles
+  in health and disease.
+url: https://srivastavalab.in
+lang: en
+
+# Contact details used in the header, footer and contact page
+lab:
+  pi: Dr. Shanti Swaroop Srivastava
+  email: shanti@iiserbpr.ac.in
+  phone: "+91 9674810412"
+  phone_alt: "+91 8249524316"
+  address: >-
+    IISER Berhampur, Vigyanpuri, Laudigam, Konisi, PS: Golanthara,
+    Dist. Ganjam, Odisha - 760003, India
+  iiser_url: https://www.iiserbpr.ac.in/
+  iiser_profile: https://www.iiserbpr.ac.in/people/profile/shanti
+  flickr: https://www.flickr.com/photos/166353669@N03/
+  instagram: https://www.instagram.com/iiserbpr_official/p/C4XCxH0sGFO/
+  map_embed: https://maps.google.com/maps?q=IISER%20Berhampur&z=13&output=embed
+  # Contact and appointment forms are delivered by Formspree
+  formspree: https://formspree.io/f/xblykyyg
+
+# Main menu. "children" makes a dropdown.
+nav:
+  - title: Home
+    url: index.html
+  - title: Publications
+    url: publications.html
+  - title: Team
+    url: team.html
+  - title: Research
+    children:
+      - title: Glycoside Hydrolases & Glycosyl Transferases
+        url: gh-gt.html
+      - title: Bacterial Innate Immunity
+        url: bacterial-immunity.html
+      - title: PP2A
+        url: pp2a.html
+      - title: Protocols
+        url: coming-soon.html
+  - title: Contact Us
+    url: contact.html
+
+# Profile pages (one Markdown file per person in _people/) and
+# research project pages (one file per project in _research/).
+# Both keep their existing addresses, e.g. rohit.html, pp2a.html.
+collections:
+  people:
+    output: true
+    permalink: /:name.html
+  research:
+    output: true
+    permalink: /:name.html
+
+defaults:
+  - scope: { path: "", type: people }
+    values: { layout: person }
+  - scope: { path: "", type: research }
+    values: { layout: research }
+  - scope: { path: "" }
+    values: { layout: default }
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .claude

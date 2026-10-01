@@ -1,0 +1,179 @@
+# Publications, newest first. To add a paper, copy one entry and edit it.
+# image: a figure from the paper, saved under images/blog/
+
+- title: 'SARS-CoV-2 variants of concern: spike protein mutational analysis and epitope for broad neutralization'
+  journal: Nature Communications
+  date: 18 Aug 2022
+  year: 2022
+  url: https://www.nature.com/articles/s41467-022-32262-8
+  image: images/blog/5.jpg
+  authors: Dhiraj Mannar, James W. Saville, Zehua Sun, Xing Zhu, Michelle M. Marti, Shanti S. Srivastava,
+    Alison M. Berezuk, Steven Zhou, Katharine S. Tuttle, Michele D. Sobolewski, Andrew Kim, Benjamin R.
+    Treat, Priscila Mayrelle Da Silva Castanha, Jana L. Jacobs, Simon M. Barratt-Boyes, John W. Mellors,
+    Dimiter S. Dimitrov, Wei Li, Sriram Subramaniam
+  summary: This study explores neutralization by antibody fragment VH ab6 against major SARS-CoV-2 variants,
+    revealing structural insights into spike mutations and antibody evasion.
+- title: Three-Dimensional Visualization of Viral Structure, Entry, and Replication Underlying the Spread
+    of SARS-CoV-2
+  journal: Chemical Reviews
+  date: 21 Jul 2022
+  year: 2022
+  url: https://pubs.acs.org/doi/abs/10.1021/acs.chemrev.1c01062
+  image: images/blog/7.jpg
+  authors: James W Saville, Alison M Berezuk, Shanti S Srivastava, Sriram Subramaniam
+  summary: This review details structural biology and pathobiology of SARS-CoV-2, focusing on its life
+    cycle and imaging techniques that advance our understanding of viral entry and replication.
+- title: Structural and biochemical rationale for enhanced spike protein fitness in delta and kappa SARS-CoV-2
+    variants
+  journal: Nature Communications
+  date: 8 Feb 2022
+  year: 2022
+  url: https://www.nature.com/articles/s41467-022-28353-x
+  image: images/blog/3.jpg
+  authors: James W. Saville, Dhiraj Mannar, Xing Zhu, Shanti S. Srivastava, Alison M. Berezuk, Jean-Philippe
+    Demers, Steven Zhou, Katharine S. Tuttle, Inna Sekirov, Andrew Kim, Wei Li, Dimiter S. Dimitrov, Sriram
+    Subramaniam
+  summary: This study evaluates the Delta and Kappa variants’ structural and biochemical fitness, highlighting
+    their antibody escape mechanisms and ACE2 binding dynamics.
+- title: 'SARS-CoV-2 Omicron variant: Antibody evasion and cryo-EM structure of spike protein–ACE2 complex'
+  journal: Science
+  date: 20 Jan 2022
+  year: 2022
+  url: https://www.science.org/doi/full/10.1126/science.abn7760
+  image: images/blog/blog01.jpg
+  summary: Mannar, Saville, Zhu, Srivastava, Berezuk, Tuttle, Marquez, Sekirov, and Subramaniam present
+    the cryo-EM structure of the SARS-CoV-2 Omicron variant spike protein bound to human ACE2, revealing
+    how mutations allow antibody evasion and maintain receptor binding. This study offers insight into
+    Omicron’s rapid spread and immune resistance.
+- title: Structural analysis of receptor binding domain mutations in SARS-CoV-2 variants of concern that
+    modulate ACE2 and antibody binding
+  journal: Cell Reports
+  date: 21 Dec 2021
+  year: 2021
+  url: https://www.cell.com/cell-reports/fulltext/S2211-1247(21)01652-1?dgcid=raven_jbs_etoc_email
+  image: images/blog/4.jpg
+  authors: Dhiraj Mannar, James W. Saville, Xing Zhu, Shanti S. Srivastava, Alison M. Berezuk, Steven
+    Zhou, Katharine S. Tuttle, Andrew Kim, Wei Li, Dimiter S. Dimitrov, Sriram Subramaniam
+  summary: This study investigates key mutations in SARS-CoV-2 variants that enhance ACE2 binding and
+    promote antibody evasion through structural analyses.
+- title: Cryo-EM structures of the N501Y SARS-CoV-2 spike protein in complex with ACE2 and neutralizing
+    antibodies
+  journal: PLoS Biology
+  date: 29 Apr 2021
+  year: 2021
+  url: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001237
+  image: images/blog/2.jpg
+  authors: Xing Zhu, Dhiraj Mannar, Shanti S. Srivastava, Alison M. Berezuk, Jean-Philippe Demers, James
+    W. Saville, Karoline Leopold, Wei Li, Dimiter S. Dimitrov, Katharine S. Tuttle, Steven Zhou, Sagar
+    Chittori, Sriram Subramaniam
+  summary: This 2.9-Å cryo-EM study reveals N501Y’s interaction with ACE2, enhancing infectivity without
+    compromising antibody binding.
+- title: Cryo-EM structure of the N501Y SARS-CoV-2 spike protein in complex with a potent neutralizing
+    antibody
+  journal: bioRxiv (preprint)
+  date: '2021'
+  year: 2021
+  url: https://pubmed.ncbi.nlm.nih.gov/33914735/
+  image: images/blog/11.jpg
+  authors: Xing Zhu, Dhiraj Mannar, Shanti Swaroop Srivastava, Alison Berezuk, Jean-Philippe Demers, James
+    Saville, Karoline Leopold, Wei Li, Dimiter S Dimitrov, Katharine Tuttle, Steven Zhou, Sagar Chittori,
+    Sriram Subramaniam
+  summary: This study presents a cryo-EM structure of the N501Y spike protein of the UK variant of SARS-CoV-2,
+    showing how the mutation increases infectivity while retaining neutralizing antibody binding sites.
+- title: High Potency of a Bivalent Human VH Domain in SARS-CoV-2 Animal Models
+  journal: Cell
+  date: 15 Oct 2020
+  year: 2020
+  url: https://www.sciencedirect.com/science/article/pii/S009286742031148X
+  image: images/blog/15.jpg
+  authors: Wei Li, Alexandra Schäfer, Swarali S. Kulkarni, Xianglei Liu, David R. Martinez, Chuan Chen,
+    Zehua Sun, Sarah R. Leist, Aleksandra Drelich, and others
+  summary: A novel human antibody domain, VH ab8, was developed showing strong neutralizing effects against
+    SARS-CoV-2 in mice and hamsters. Its small size and bivalency made it highly effective in targeting
+    the virus and blocking ACE2 interaction, positioning it as a promising COVID-19 therapeutic.
+- title: Plasmodium vivax and human hexokinases share similar active sites but display distinct quaternary
+    architectures
+  journal: IUCrJ Volume 7, Part 3
+  date: May 2020
+  year: 2020
+  url: https://doi.org/10.1107/S2052252520002456
+  image: images/blog/10.jpg
+  authors: Shanti Swaroop Srivastava, Joseph E. Darling, Jimmy Suryadi, James C. Morris, Mark E. Drew,
+    Sriram Subramaniam
+  summary: This study reports cryo-EM structures of Plasmodium vivax hexokinase (PvHK), revealing a unique
+    tetrameric organization that is distinct from human hexokinases, providing insights for the design
+    of parasite-selective antimalarial drugs.
+- title: βγ-Crystallination Endows a Novel Bacterial Glycoside Hydrolase 64 with Ca2+-Dependent Activity
+    Modulation
+  journal: Journal of Bacteriology Vol 201, No. 23
+  date: 5 Nov 2019
+  year: 2019
+  url: https://doi.org/10.1128/jb.00392-19
+  image: images/blog/13.jpg
+  authors: Bal Krishnan, Shanti Swaroop Srivastava, Venu Sankeshi, Rupsi Garg, Sudhakar Srivastava, Rajan
+    Sankaranarayanan, Yogendra Sharma
+  summary: This study explores the role of a βγ-crystallin domain in modulating the enzymatic activity
+    of a glycoside hydrolase, glucanallin, and its potential application in biofuel production from β-1,3-glucans.
+- title: Interface interactions between βγ-crystallin domain and Ig-like domain render Ca2+-binding site
+    inoperative in abundant perithecial protein of Neurospora crassa
+  journal: Molecular Microbiology
+  date: 14 Sept 2018
+  year: 2018
+  url: https://onlinelibrary.wiley.com/doi/full/10.1111/mmi.14130
+  image: images/blog/14.jpg
+  authors: Shanti Swaroop Srivastava, Rajeev Raman, Uday Kiran, Rupsi Garg, Swathi Chadalawada, Asmita
+    D. Pawar, Rajan Sankaranarayanan, Yogendra Sharma
+  summary: This study investigates how interdomain interactions in the abundant perithecial protein (APP)
+    of *Neurospora crassa* render its Ca2+-binding site inactive, revealing a novel mode of Ca2+-binding
+    regulation in proteins with both βγ-crystallin and Ig-like domains.
+- title: A Transition Metal-Binding, Trimeric βγ-Crystallin from Methane-Producing Thermophilic Archaea,
+    Methanosaeta thermophila
+  journal: Biochemistry Vol 56, Issue 9
+  date: 28 Dec 2016
+  year: 2016
+  url: https://pubs.acs.org/doi/full/10.1021/acs.biochem.6b00985
+  image: images/blog/12.jpg
+  authors: Shanti Swaroop Srivastava, Aditya Anand Jamkhindikar, Rajeev Raman, Maroor K. Jobby, Swathi
+    Chadalawada, Rajan Sankaranarayanan, Yogendra Sharma
+  summary: This study reveals that Methallin, a βγ-crystallin from Methanosaeta thermophila, is a trimeric,
+    transition metal-binding protein, providing new insights into its potential biogeochemical roles and
+    high-affinity metal ion binding.
+- title: Microbial βγ-crystallins
+  journal: Progress in Biophysics and Molecular Biology
+  date: 1 Jul 2014
+  year: 2014
+  url: https://www.sciencedirect.com/science/article/pii/S0079610714000108
+  image: images/blog/beta.jpg
+  authors: Amita Mishra, Bal Krishnan, Shanti Swaroop Srivastava, Yogendra Sharma
+  summary: This review highlights microbial βγ-crystallins as a diverse superfamily of Ca2+-binding proteins,
+    noting their evolutionary adaptations and the need for experimental characterization.
+- title: Ca2+-binding motif of βγ-crystallins
+  journal: Journal of Biological Chemistry
+  date: 18 Apr 2014
+  year: 2014
+  url: https://www.jbc.org/article/S0021-9258(20)48315-2/abstract
+  image: images/blog/6.jpg
+  authors: Shanti Swaroop Srivastava, Amita Mishra, Bal Krishnan, Yogendra Sharma
+  summary: This study investigates the βγ-crystallin-type double clamp motif for Ca2+ binding, highlighting
+    its structural diversity and potential functional implications.
+- title: Aggregation-Prone Near-Native Intermediate Formation during Unfolding of a Structurally Similar
+    Nonlenticular βγ-Crystallin Domain
+  journal: Biochemistry Vol 51/Issue 43
+  date: 8 Oct 2012
+  year: 2012
+  url: https://pubs.acs.org/doi/full/10.1021/bi300844u
+  image: images/blog/9.jpg
+  authors: V. Rajanikanth, Shanti Swaroop Srivastava, Aditya K. Singh, M. Rajyalakshmi, Kousik Chandra,
+    Penmatsa Aravind, Rajan Sankaranarayanan, Yogendra Sharma
+  summary: This study investigates the unfolding pathways of βγ-crystallins and the formation of an aggregation-prone
+    intermediate state in the Crybg3_D3 domain, offering insights into its structural and functional divergence
+    in non-lens tissues of vertebrates.
+- title: Decoding the Molecular Design Principles Underlying Ca2+ Binding to βγ-Crystallin Motifs
+  journal: Journal of Molecular Biology
+  date: 6 Jan 2012
+  year: 2012
+  url: https://www.sciencedirect.com/science/article/pii/S0022283611011740
+  image: images/blog/8.jpg
+  authors: Amita Mishra, Shashi Kumar Suman, Shanti S Srivastava, Rajan Sankaranarayanan, Yogendra Sharma
+  summary: This study analyzes Ca²⁺ binding in βγ-crystallin motifs, identifying binding determinants
+    and stability gains through detailed structural investigations.

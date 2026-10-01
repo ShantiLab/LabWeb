@@ -1,0 +1,15 @@
+{%- assign m = include.m -%}
+<article class="card member-card">
+  <div class="member-photo">
+    {%- if m.page %}<a href="{{ m.page | relative_url }}" tabindex="-1" aria-hidden="true">{% endif -%}
+    <img src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">
+    {%- if m.page %}</a>{% endif %}
+    {%- if m.linkedin %}
+    <a class="member-linkedin" href="{{ m.linkedin }}" target="_blank" rel="noopener" aria-label="{{ m.name }} on LinkedIn">{% include icon.html name="linkedin" %}</a>
+    {%- endif %}
+  </div>
+  <div class="card-body">
+    <h3>{% if m.page %}<a href="{{ m.page | relative_url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</h3>
+    <p>{{ m.role }}</p>
+  </div>
+</article>

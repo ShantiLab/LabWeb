@@ -1,0 +1,37 @@
+---
+layout: default
+---
+{%- comment -%}
+  Research project page. Front matter:
+    title, summary (hero line), video (optional),
+    team, year, institution, category
+  The Markdown body holds the overview / objectives / significance.
+{%- endcomment -%}
+<section class="research-hero">
+  <div class="container">
+    <span class="pill">Research</span>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.summary }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container research">
+    <article class="research-body prose">
+      {%- if page.video %}
+      <video class="research-video" src="{{ page.video | relative_url | replace: ' ', '%20' }}" autoplay muted loop playsinline></video>
+      {%- endif %}
+      {{ content }}
+    </article>
+
+    <aside class="research-facts">
+      <dl>
+        {%- if page.team %}<div><dt>{% include icon.html name="users" %}Team</dt><dd>{{ page.team }}</dd></div>{% endif %}
+        {%- if page.year %}<div><dt>{% include icon.html name="calendar" %}Year</dt><dd>{{ page.year }}</dd></div>{% endif %}
+        {%- if page.institution %}<div><dt>{% include icon.html name="pin" %}Institution</dt><dd>{{ page.institution }}</dd></div>{% endif %}
+        {%- if page.category %}<div><dt>{% include icon.html name="tag" %}Category</dt><dd>{{ page.category }}</dd></div>{% endif %}
+      </dl>
+      <a class="btn btn-primary" href="{{ '/publications.html' | relative_url }}">Our publications{% include icon.html name="arrow" %}</a>
+    </aside>
+  </div>
+</section>

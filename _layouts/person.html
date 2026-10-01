@@ -1,0 +1,46 @@
+---
+layout: default
+---
+{%- comment -%}
+  Profile page. Front matter fields (all optional except name/photo):
+    name, photo, position, email, linkedin,
+    details:  list of { label, value }   → "Personal Information"
+    history:  list of { label, value }   → "Education & Experiences" (title via history_title)
+  The Markdown body (Biography, Awards, …) is shown below.
+{%- endcomment -%}
+{%- assign p = page -%}
+{% include page-title.html title=p.name parent="Team" parent_url="team.html" %}
+
+<section class="section">
+  <div class="container profile">
+    <aside class="profile-card">
+      <img src="{{ p.photo | relative_url }}" alt="{{ p.name }}" width="400" height="500">
+      {%- if p.email or p.linkedin or p.iiser_profile %}
+      <div class="profile-links">
+        {%- if p.email %}<a href="mailto:{{ p.email }}">{% include icon.html name="mail" %}{{ p.email }}</a>{% endif %}
+        {%- if p.linkedin %}<a href="{{ p.linkedin }}" target="_blank" rel="noopener">{% include icon.html name="linkedin" %}LinkedIn</a>{% endif %}
+        {%- if p.iiser_profile %}<a href="{{ p.iiser_profile }}" target="_blank" rel="noopener">{% include icon.html name="external" %}IISER faculty profile</a>{% endif %}
+      </div>
+      {%- endif %}
+    </aside>
+
+    <div class="profile-main">
+      {%- if p.position %}<p class="eyebrow">{{ p.position }}</p>{% endif %}
+      {%- if p.details %}
+      <h2 class="underline">Personal Information</h2>
+      <dl class="facts">
+        {%- for d in p.details %}<dt>{{ d.label }}</dt><dd>{{ d.value }}</dd>{% endfor %}
+      </dl>
+      {%- endif %}
+      {%- if p.history %}
+      <h2 class="underline">{{ p.history_title | default: "Education & Experiences" }}</h2>
+      <dl class="facts">
+        {%- for d in p.history %}<dt>{{ d.label }}</dt><dd>{{ d.value }}</dd>{% endfor %}
+      </dl>
+      {%- endif %}
+      <div class="profile-body prose">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</section>

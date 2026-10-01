@@ -1,0 +1,68 @@
+{%- assign here = page.url | remove_first: "/" -%}
+{%- if here == "" %}{% assign here = "index.html" %}{% endif -%}
+{%- if page.collection == "people" %}{% assign here = "team.html" %}{% endif -%}
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-contact">
+      <a href="tel:{{ site.lab.phone | remove: ' ' }}">{% include icon.html name="phone" %}{{ site.lab.phone }}</a>
+      <a href="mailto:{{ site.lab.email }}">{% include icon.html name="mail" %}{{ site.lab.email }}</a>
+    </div>
+    <div class="topbar-social">
+      <a href="{{ site.lab.flickr }}" target="_blank" rel="noopener" aria-label="Flickr">{% include icon.html name="flickr" %}</a>
+      <a href="{{ site.lab.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">{% include icon.html name="instagram" %}</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+      <img src="{{ '/images/SSSLOGO.svg' | relative_url }}" alt="SSS Structural Biology Lab" width="125" height="79">
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      {% include icon.html name="menu" %}
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="menu">
+        {%- for item in site.nav %}
+        {%- if item.children %}
+        {%- assign open = false -%}
+        {%- for child in item.children %}{% if child.url == here %}{% assign open = true %}{% endif %}{% endfor %}
+        <li class="has-sub{% if open %} active{% endif %}">
+          <button class="sub-toggle" type="button" aria-expanded="false">{{ item.title }}{% include icon.html name="chevron-down" %}</button>
+          <ul class="submenu">
+            {%- for child in item.children %}
+            <li><a href="{{ child.url | relative_url }}"{% if child.url == here %} aria-current="page"{% endif %}>{{ child.title }}</a></li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- else %}
+        <li{% if item.url == here %} class="active"{% endif %}><a href="{{ item.url | relative_url }}"{% if item.url == here %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {%- endif %}
+        {%- endfor %}
+      </ul>
+
+      <div class="appointment">
+        <button class="btn btn-light appointment-toggle" type="button" aria-expanded="false" aria-controls="appointment-panel">
+          {% include icon.html name="calendar" %}Appointment
+        </button>
+        <div class="appointment-panel" id="appointment-panel" hidden>
+          <h3>Keep in touch!</h3>
+          <form action="{{ site.lab.formspree }}" method="POST" class="form-grid">
+            <input type="hidden" name="_subject" value="Appointment request (srivastavalab.in)">
+            <label><span class="sr-only">Your name</span><input name="name" type="text" placeholder="Your Name" required></label>
+            <label><span class="sr-only">Phone number</span><input name="phone" type="tel" placeholder="Phone Number" required></label>
+            <label><span class="sr-only">Email</span><input name="email" type="email" placeholder="Email"></label>
+            <label><span class="sr-only">Preferred date</span><input name="date" type="date" aria-label="Preferred date"></label>
+            <label class="span-2"><span class="sr-only">Note</span><input name="note" type="text" placeholder="Note"></label>
+            <button class="btn btn-primary span-2" type="submit">Book appointment</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

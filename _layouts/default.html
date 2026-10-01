@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+{% include head.html %}
+</head>
+<body id="top" class="page-{{ page.slug | default: page.name | remove: '.html' | default: 'home' }}">
+{% include header.html %}
+<main id="main">
+{{ content }}
+</main>
+{% include footer.html %}
+</body>
+</html>

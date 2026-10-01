@@ -1,0 +1,67 @@
+# Lab news shown on the homepage, newest first.
+# To add news, copy an entry to the top and edit it. "link" is optional.
+
+- title: JRF Opening at IISER Berhampur – Cryo-EM Research
+  date: 23 July 2025
+  author: Dr. Shanti S. Srivastava
+  image: images/random66.jpg
+  link: https://www.iiserbpr.ac.in/home/activity_view/399
+  text: >
+    Applications invited for 1 JRF position in a SERB-funded project on bacterial innate immunity at
+    IISER Berhampur. Duration till Feb 2026. Candidates with experience in molecular biology and
+    bioinformatics preferred. Last date: August 7, 2025.
+
+- title: Congratulations to Our Graduating Students
+  date: 23 July 2025
+  author: Dr. Shanti S. Srivastava
+  image: images/random89.jpg
+  text: >
+    Hearty congratulations to Huda, Sashank, and Siddhant for successfully completing their Master’s
+    thesis work in our lab and receiving their BS-MS degrees during the 5th Convocation at IISER
+    Berhampur, held in the presence of the Hon’ble Governor, Education Minister, and other
+    distinguished dignitaries.
+
+- title: Rigaku XtaLAB Synergy-DW Single Crystal XRD System Installed
+  date: April 2025
+  author: Lab Admin
+  image: images/random5.jpg
+  text: >
+    The Rigaku XtaLAB Synergy-DW Single Crystal XRD System is now fully operational at CAIF, IISER
+    Berhampur. This state-of-the-art instrument will significantly enhance our capabilities in
+    structural biology, chemistry, and materials science by enabling high-resolution single crystal
+    diffraction analysis. Its installation marks a major step forward in supporting advanced research
+    and interdisciplinary collaboration across the institute.
+
+- title: New ÄKTA Start System Installed
+  date: February 2025
+  author: Lab Admin
+  image: https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/images/121/394/07ae51ac-027a-496e-bb6a-03f569ee9c79/640/07ae51ac-027a-496e-bb6a-03f569ee9c79.jpg
+  text: >
+    We are excited to announce the successful installation of the new ÄKTA start system in
+    Institute's CAIF. This state-of-the-art protein purification system has already enhanced our
+    capabilities in isolating and characterizing biomolecules with precision and efficiency.
+
+- title: PhD Positions in Biological Sciences
+  date: February 2025
+  author: Lab Admin
+  image: images/random4.jpg
+  text: >
+    Applications open for PhD candidates in molecular biology, bioinformatics, and structural
+    biology. Fully-funded positions available for 2025 intake. Application deadline: March 14, 2025.
+
+- title: Quarterly Union for Academic Discourse
+  date: January 2025
+  author: Lab Admin
+  image: images/random3.jpg
+  text: >
+    Our laboratory played a central role in the successfully concluded QUAD-5 conference at IISER
+    Berhampur (Jan 31 - Feb 1, 2025), where we co-led pivotal discussions on behavioral health and
+    disease mechanisms.
+
+- title: Joining of Avishek Kar as Post Doctoral Research Fellow
+  date: December 24, 2024
+  author: Lab Admin
+  image: images/random2.jpg
+  text: >
+    We are pleased to welcome Dr. Avishek Kar to our research team as a Post Doctoral Fellow. His
+    expertise will strengthen our ongoing projects in protein dynamics research.

@@ -1,0 +1,84 @@
+# Lab members. Add a person by copying an entry.
+# page: only if the person has a profile page in _people/
+
+current:
+- name: Rohit Sen
+  role: PhD Student (SRF) JAN 2023
+  photo: images/team-member/rohit.jpg
+  page: rohit.html
+  linkedin: https://in.linkedin.com/in/rohit-sen-159528186
+- name: Subhangi Subudhi
+  role: PhD Student (SRF) AUG 2023
+  photo: images/team-member/subhangi.jpg
+  page: subhangi.html
+  linkedin: https://in.linkedin.com/in/subhangi-subudhi-0320981aa
+- name: Dr. Avishek Kar
+  role: ANRF- National Post Doctoral Fellow
+  photo: images/team-member/avi.jpg
+  page: avishek.html
+  linkedin: https://in.linkedin.com/in/avishekar
+- name: Huda Abdul Jaleel
+  role: PhD Student (JRF) JAN 2026
+  photo: images/team-member/Hudaa.jpg
+  page: huda.html
+  linkedin: https://in.linkedin.com/in/huda-jaleel
+- name: Munna Ram Gurjar
+  role: iPhD Student
+  photo: images/team-member/Munnaa.jpg
+  linkedin: https://in.linkedin.com/in/manu-gurjar-051594231
+- name: Arnab Pan
+  role: Cryo-EM Specialist
+  photo: images/team-member/Arnab.jpg
+  linkedin: https://www.linkedin.com/in/arnab-pan-553149303/
+- name: Pratyush Kumar Patel
+  role: BS-MS Dissertation Student (2027)
+  photo: images/team-member/Pratyush.jpg
+- name: Nishant Ranjan
+  role: PhD Student (JRF) AUG 2026
+  photo: images/team-member/Nishant.jpg
+  linkedin: https://in.linkedin.com/in/nishant-ranjan-6a2672202
+former:
+- name: Tasneem Nasrin
+  role: BS-MS Dissertation Student (2026)
+  photo: images/team-member/tas.jpg
+  linkedin: https://in.linkedin.com/in/tasneem-nasrin
+- name: Sourashis Sadhu
+  role: BS-MS Dissertation Student (2026)
+  photo: images/team-member/Sourashis.jpg
+  linkedin: https://in.linkedin.com/in/sourashis-sadhu-16190326b
+- name: Shraddha Dhuruwe
+  role: Junior Research Fellow
+  photo: images/team-member/shrad.jpg
+  page: shraddha.html
+- name: Hiranmoy Adak
+  role: Alumni
+  photo: images/team-member/hiranmoy.jpg
+  page: hiranmoy.html
+  linkedin: https://in.linkedin.com/in/hiranmoy-adak-388aba221
+- name: Siddhant Raj Naik
+  role: BS-MS Dissertation Student (2025)
+  photo: images/team-member/siddhant.jpg
+  page: siddhant.html
+- name: Shashank Raj
+  role: BS-MS Dissertation Student (2025)
+  photo: images/team-member/sas.jpg
+  page: shashank.html
+- name: Jyoti Ranjan
+  role: Junior Research Fellow
+  photo: images/team-member/jyoti.jpg
+  page: jyoti.html
+- name: Manisha Manaswini
+  role: BS-MS Dissertation Student (2024)
+  photo: images/team-member/manisha.jpg
+  linkedin: https://www.linkedin.com/in/manisha-manaswini-792773307
+- name: Kishun Tudu
+  role: BS-MS Dissertation Student (2024)
+  photo: images/team-member/kisun.jpg
+  linkedin: https://www.linkedin.com/in/kishun-ktd-397b3b218
+gallery:
+- images/services/Summer2026.jpg
+- images/services/OneStop.jpg
+- images/services/bday.jpg
+- images/services/random1.jpg
+- images/services/labdinner2.jpg
+- images/services/labdinner3.jpg
