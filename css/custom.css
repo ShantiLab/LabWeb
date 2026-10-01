@@ -1,0 +1,221 @@
+/* ==========================================================================
+   SSS Lab – site-wide refinements (loaded after the template CSS)
+   Palette: primary #3368c6 · navy #031b4e · light #f6faff · border #eaeff5
+   ========================================================================== */
+
+:root {
+    --lab-primary: #3368c6;
+    --lab-primary-dark: #2552a6;
+    --lab-navy: #031b4e;
+    --lab-text: #5b6478;
+    --lab-light: #f6faff;
+    --lab-border: #eaeff5;
+    --lab-radius: 12px;
+    --lab-shadow: 0 6px 24px rgba(3, 27, 78, 0.08);
+    --lab-shadow-hover: 0 14px 34px rgba(3, 27, 78, 0.14);
+}
+
+html { scroll-behavior: smooth; }
+
+/* Readability: the template's #8a91ac body grey is too faint on white */
+body,
+p,
+.title-desc,
+.featured-desc p,
+.ttm-team-list-value { color: var(--lab-text); }
+
+::selection { background: var(--lab-primary); color: #fff; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(51, 104, 198, 0.45);
+    outline-offset: 2px;
+}
+
+/* Buttons ---------------------------------------------------------------- */
+.ttm-btn { border-radius: 8px; transition: all .25s ease; }
+.ttm-btn.ttm-btn-style-fill:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(51, 104, 198, .25); }
+
+/* Cards: rounded corners, soft shadow, hover lift ------------------------- */
+.featured-imagebox-post,
+.featured-imagebox-team,
+.featured-imagebox-portfolio {
+    border-radius: var(--lab-radius);
+    overflow: hidden;
+    box-shadow: var(--lab-shadow);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.featured-imagebox-post:hover,
+.featured-imagebox-team:hover,
+.featured-imagebox-portfolio:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--lab-shadow-hover);
+}
+.featured-imagebox .featured-thumbnail img { transition: transform .5s ease; }
+.featured-imagebox:hover .featured-thumbnail img { transform: scale(1.04); }
+
+/* Equal-height cards in grids and in the news carousel */
+.multi-columns-row > .ttm-box-col-wrapper { display: flex; flex-direction: column; }
+.multi-columns-row > .ttm-box-col-wrapper > .featured-imagebox { flex: 1; display: flex; flex-direction: column; }
+.featured-imagebox-post .featured-content-post { flex: 1; display: flex; flex-direction: column; }
+.featured-imagebox-post .ttm-post-link { margin-top: auto; }
+.slick_slider .slick-track { display: flex !important; }
+.slick_slider .slick-slide { height: auto; display: flex !important; }
+.slick_slider .slick-slide > div,
+.slick_slider .slick-slide .featured-imagebox { width: 100%; height: 100%; }
+
+/* Publications ----------------------------------------------------------- */
+/* Show full paper titles instead of cutting them at two lines */
+.blog-grid-page .featured-imagebox-post .featured-title h5,
+.grid-section .featured-imagebox-post .featured-title h5 {
+    -webkit-line-clamp: unset;
+    display: block;
+    overflow: visible;
+    line-height: 1.4;
+}
+.grid-section .featured-imagebox-post .featured-desc p {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.grid-section .featured-imagebox-post .ttm-post-thumbnail {
+    aspect-ratio: 4 / 3;
+    background: #fff;
+    border-bottom: 1px solid var(--lab-border);
+}
+.grid-section .featured-imagebox-post .ttm-post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+.featured-imagebox-post .post-meta .ttm-meta-line:first-child {
+    background: rgba(51, 104, 198, .1);
+    color: var(--lab-primary);
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-weight: 500;
+}
+
+/* Publications search box (header) */
+.header_search .header_search_content { border-radius: 10px; box-shadow: var(--lab-shadow-hover); }
+.header_search .search_query { border-radius: 8px; }
+
+/* Page title banners: readable title over photos -------------------------- */
+.ttm-page-title-row-publications { background-image: url(../images/ttm-pagetitle-bg1.jpg) !important; }
+.ttm-page-title-row .page-title-heading .title { letter-spacing: -.5px; }
+
+/* Team grid: uniform portrait crops ---------------------------------------- */
+.featured-imagebox-team .featured-thumbnail { aspect-ratio: 4 / 5; overflow: hidden; }
+.featured-imagebox-team .featured-thumbnail img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.featured-imagebox-team .featured-content-team { padding: 16px 12px 18px; }
+.featured-imagebox-team .featured-title h5 a { color: var(--lab-navy); }
+.featured-imagebox-team .featured-title h5 a:hover { color: var(--lab-primary); }
+
+/* Profile pages ------------------------------------------------------------ */
+.ttm-team-member-single-content-wrapper .ttm-featured-wrapper img,
+.ttm-team-member-single-content-wrapper .featured-thumbnail img {
+    border-radius: var(--lab-radius);
+    box-shadow: var(--lab-shadow);
+}
+.ttm-team-member-single-title { position: relative; padding-bottom: 8px; }
+.ttm-team-member-single-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 44px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--lab-primary);
+}
+
+/* Research pages: static hero (replaces the stuck one-slide slider) -------- */
+.research-hero {
+    position: relative;
+    padding: 110px 0 100px;
+    color: #fff;
+    background:
+        linear-gradient(120deg, rgba(3, 27, 78, .94) 0%, rgba(37, 82, 166, .88) 60%, rgba(51, 104, 198, .80) 100%),
+        url(../images/slides/slider-mainbg-001.jpg) center / cover no-repeat;
+    overflow: hidden;
+}
+.research-hero::after {
+    content: "";
+    position: absolute;
+    right: -120px;
+    top: -120px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, .14), rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
+}
+.research-hero .container { position: relative; z-index: 1; max-width: 900px; }
+.research-hero-tag {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .15);
+    border: 1px solid rgba(255, 255, 255, .25);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.research-hero h1 {
+    color: #fff;
+    font-size: clamp(30px, 4.5vw, 48px);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+.research-hero p {
+    color: rgba(255, 255, 255, .88);
+    font-size: clamp(16px, 1.6vw, 19px);
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0;
+}
+
+/* Funding agencies band */
+.element-row.element-style .container > .row:last-child,
+.element-style .ttm-bgcolor-darkgrey { border-radius: var(--lab-radius); }
+
+/* Footer --------------------------------------------------------------- */
+.deneb_footer .widget_wrapper { border-top: 1px solid var(--lab-border); }
+.deneb_footer .widegt_about .widget_title img {
+    max-width: 150px;
+    mix-blend-mode: multiply; /* drop the logo's white box on the tinted footer */
+}
+.deneb_footer .widget_link ul li a { transition: color .2s ease, padding-left .2s ease; }
+.deneb_footer .widget_link ul li a:hover { color: var(--lab-primary); padding-left: 4px; }
+.deneb_footer .gmap_canvas,
+.deneb_footer .mapouter { border-radius: 10px; overflow: hidden; }
+.deneb_footer .copyright_area {
+    background: var(--lab-navy);
+    border-radius: 10px 10px 0 0;
+}
+.deneb_footer .copyright_area p,
+.deneb_footer .copyright_area a { color: rgba(255, 255, 255, .8); }
+
+/* Back-to-top button */
+#totop { border-radius: 10px; box-shadow: 0 8px 18px rgba(51, 104, 198, .3); }
+
+/* Small screens ---------------------------------------------------------- */
+@media (max-width: 767px) {
+    .research-hero { padding: 70px 0 60px; }
+    .featured-imagebox-post:hover,
+    .featured-imagebox-team:hover,
+    .featured-imagebox-portfolio:hover { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+}
