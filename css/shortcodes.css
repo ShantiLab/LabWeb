@@ -316,7 +316,7 @@
     background-size: cover;
 }
 .col-bg-img-thirteen.ttm-col-bgimage-yes .ttm-col-wrapper-bg-layer{
-    background-image: url(../images/bg-image/col-bgimage-13.html);
+    background-image: none;
     background-position: center !important; 
     background-repeat: no-repeat;
     background-size: cover;
