@@ -42,7 +42,7 @@
             <li>{% include icon.html name="mail" %}<a href="mailto:{{ site.lab.email }}">{{ site.lab.email }}</a></li>
             <li>{% include icon.html name="pin" %}<span>{{ site.lab.address }}</span></li>
           </ul>
-          <a class="footer-directions" href="https://maps.google.com/?q=IISER+Berhampur" target="_blank" rel="noopener">Get directions{% include icon.html name="external" %}</a>
+          <a class="footer-directions" href="{{ site.lab.map_link }}" target="_blank" rel="noopener">Get directions{% include icon.html name="external" %}</a>
         </div>
       </div>
       <div class="footer-bottom">
