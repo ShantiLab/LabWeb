@@ -1,0 +1,115 @@
+# Pages CMS configuration – defines the admin forms at https://app.pagescms.org
+# Docs: https://pagescms.org/docs/configuration/
+
+media:
+  input: images
+  output: /images
+
+content:
+  - name: publications
+    label: Publications
+    type: file
+    path: _data/publications.yml
+    format: yaml
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: journal
+        label: Journal
+        type: string
+        required: true
+      - name: date
+        label: Date as shown (e.g. 18 Aug 2022)
+        type: string
+      - name: year
+        label: Year (used for grouping)
+        type: number
+        required: true
+      - name: url
+        label: Link to the paper
+        type: string
+        required: true
+      - name: image
+        label: Figure
+        type: image
+      - name: authors
+        label: Authors
+        type: text
+      - name: summary
+        label: Summary
+        type: text
+
+  - name: team
+    label: Team
+    type: file
+    path: _data/team.yml
+    format: yaml
+    fields:
+      - name: current
+        label: Current members
+        type: object
+        list: true
+        fields: &member
+          - name: name
+            label: Name
+            type: string
+            required: true
+          - name: role
+            label: Role
+            type: string
+          - name: photo
+            label: Photo
+            type: image
+          - name: page
+            label: Profile page (e.g. rohit.html, leave empty if none)
+            type: string
+          - name: linkedin
+            label: LinkedIn link
+            type: string
+      - name: former
+        label: Former members
+        type: object
+        list: true
+        fields: *member
+      - name: gallery
+        label: Happy Moments photos
+        type: image
+        list: true
+
+  - name: research
+    label: Research projects
+    type: collection
+    path: _research
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: title
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: summary
+        label: One-line summary
+        type: text
+      - name: video
+        label: Video path (e.g. /images/services/pp2a.mp4)
+        type: string
+      - name: team
+        label: Team
+        type: string
+      - name: year
+        label: Year
+        type: number
+      - name: institution
+        label: Institution
+        type: string
+      - name: category
+        label: Category
+        type: string
+      - name: body
+        label: Page content
+        type: rich-text
