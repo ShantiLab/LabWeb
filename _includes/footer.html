@@ -1,43 +1,59 @@
+{%- assign f = site.data.footer -%}
 <footer class="site-footer">
-  <div class="footer-widgets">
-    <div class="container footer-grid">
-      <div class="footer-about">
-        <img src="{{ '/images/SSSLOGO.svg' | relative_url }}" alt="SSS Structural Biology Lab" width="150" height="95" loading="lazy">
-        <p>Unraveling life’s molecular machinery through cryo-EM and crystallography. Bridging structural biology with therapeutic discovery. Training tomorrow’s scientists to explore, innovate, and impact global health.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Links</h4>
-        <ul>
-          <li><a href="{{ site.lab.iiser_profile }}" target="_blank" rel="noopener">IISER Bpr Website</a></li>
-          <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
-          <li><a href="{{ '/team' | relative_url }}">Team</a></li>
-          <li><a href="{{ site.lab.instagram }}" target="_blank" rel="noopener">Social</a></li>
-        </ul>
-      </div>
-      <div class="footer-map">
-        <h4>Locate Us</h4>
-        <iframe src="{{ site.lab.map_embed }}" title="Map of IISER Berhampur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-
-    <div class="container footer-contact">
-      <div class="contact-item">
-        {% include icon.html name="pin" %}
-        <div><h5>Address</h5><p>{{ site.lab.address }}</p></div>
-      </div>
-      <div class="contact-item">
-        {% include icon.html name="phone" %}
-        <div><h5>Call Us On</h5><p><a href="tel:{{ site.lab.phone | remove: ' ' }}">{{ site.lab.phone }}</a></p></div>
-      </div>
-      <div class="contact-item">
-        {% include icon.html name="mail" %}
-        <div><h5>Email Us</h5><p><a href="mailto:{{ site.lab.email }}">{{ site.lab.email }}</a></p></div>
-      </div>
-    </div>
-  </div>
-
   <div class="container">
-    <div class="copyright">Copyright &copy; {{ site.time | date: "%Y" }} SSS Lab, IISER Berhampur</div>
+    <section class="footer-cta" aria-labelledby="footer-cta-title">
+      <div class="footer-cta-art"><img src="{{ f.cta_image | relative_url }}" alt="" width="820" height="561" loading="lazy" onerror="this.parentElement.hidden=true"></div>
+      <div class="footer-cta-body">
+        <h2 id="footer-cta-title">{{ f.cta_title }}</h2>
+        <p>{{ f.cta_text }}</p>
+        <div class="footer-cta-actions">
+          <a class="btn btn-pill btn-white" href="{{ '/announcements' | relative_url }}">View openings{% include icon.html name="arrow" %}</a>
+          <a class="btn btn-pill btn-ghost" href="{{ '/contact' | relative_url }}">Contact us</a>
+        </div>
+        <p class="footer-cta-note">Or email us at <a href="mailto:{{ site.lab.email }}">{{ site.lab.email }}</a></p>
+      </div>
+    </section>
+
+    <div class="footer-card">
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <img src="{{ '/images/SSSLOGO.svg' | relative_url }}" alt="SSS Structural Biology Lab" width="88" height="56" loading="lazy">
+          <p>{{ f.blurb }}</p>
+          <div class="footer-social">
+            <a href="mailto:{{ site.lab.email }}" aria-label="Email">{% include icon.html name="mail" %}</a>
+            <a href="tel:{{ site.lab.phone | remove: ' ' }}" aria-label="Call">{% include icon.html name="phone" %}</a>
+            <a href="{{ site.lab.iiser_profile }}" target="_blank" rel="noopener" aria-label="IISER faculty profile">{% include icon.html name="external" %}</a>
+          </div>
+        </div>
+        {%- for col in f.columns %}
+        <nav class="footer-col" aria-label="{{ col.title }}">
+          <h4>{{ col.title }}</h4>
+          <ul>
+            {%- for l in col.links %}
+            <li><a href="{{ l.url | relative_url }}">{{ l.title }}</a></li>
+            {%- endfor %}
+          </ul>
+        </nav>
+        {%- endfor %}
+        <div class="footer-col footer-contact-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>{% include icon.html name="phone" %}<a href="tel:{{ site.lab.phone | remove: ' ' }}">{{ site.lab.phone }}</a></li>
+            <li>{% include icon.html name="mail" %}<a href="mailto:{{ site.lab.email }}">{{ site.lab.email }}</a></li>
+            <li>{% include icon.html name="pin" %}<span>{{ site.lab.address }}</span></li>
+          </ul>
+          <a class="footer-directions" href="https://maps.google.com/?q=IISER+Berhampur" target="_blank" rel="noopener">Get directions{% include icon.html name="external" %}</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ site.time | date: "%Y" }} Srivastava Lab (SSS Lab), IISER Berhampur. All rights reserved.</p>
+        <p class="footer-bottom-links">
+          <a href="{{ site.lab.iiser_url }}" target="_blank" rel="noopener">IISER Berhampur</a>
+          <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
+          <a href="#top">Back to top</a>
+        </p>
+      </div>
+    </div>
   </div>
 </footer>
 

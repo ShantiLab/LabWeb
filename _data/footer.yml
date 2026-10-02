@@ -1,0 +1,26 @@
+# Footer content. Edit in the admin (Footer) or here.
+blurb: Unraveling life’s molecular machinery through cryo-EM and crystallography, and training tomorrow’s scientists.
+cta_title: Curious about structural biology? Work with us.
+cta_text: We welcome motivated students and researchers interested in cryo-EM, crystallography and drug discovery.
+cta_image: /images/footer/cta-illustration.png
+columns:
+  - title: Explore
+    links:
+      - title: Home
+        url: /
+      - title: Publications
+        url: /publications
+      - title: Team
+        url: /team
+      - title: Announcements
+        url: /announcements
+  - title: Research
+    links:
+      - title: Glycoside Hydrolases & GT
+        url: /gh-gt
+      - title: Bacterial Innate Immunity
+        url: /bacterial-immunity
+      - title: PP2A
+        url: /pp2a
+      - title: Protocols
+        url: /coming-soon
