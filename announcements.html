@@ -1,0 +1,41 @@
+---
+layout: default
+title: Announcements
+---
+{% include page-title.html image="/images/ttm-pagetitle-bg1.jpg" %}
+
+<section class="section section-tint">
+  <div class="container">
+    {%- assign items = site.data.news %}
+    {%- assign first = items | first %}
+
+    <article class="card featured-news">
+      <img src="{% if first.image contains '://' %}{{ first.image }}{% else %}{{ first.image | relative_url }}{% endif %}" alt="" onerror="this.hidden=true">
+      <div class="card-body">
+        <p class="eyebrow">Latest announcement</p>
+        <p class="meta"><span>{% include icon.html name="user" %}{{ first.author }}</span><span>{% include icon.html name="calendar" %}{{ first.date }}</span></p>
+        <h2>{{ first.title }}</h2>
+        <p>{{ first.text }}</p>
+        {%- if first.link %}<a class="btn btn-primary" href="{{ first.link }}" target="_blank" rel="noopener">Read more{% include icon.html name="external" %}</a>{% endif %}
+      </div>
+    </article>
+
+    <header class="section-head">
+      <p class="eyebrow">Earlier</p>
+      <h2>More News and Updates</h2>
+    </header>
+    <div class="grid grid-3">
+      {%- for n in items offset: 1 %}
+      <article class="card news-card">
+        <img src="{% if n.image contains '://' %}{{ n.image }}{% else %}{{ n.image | relative_url }}{% endif %}" alt="" loading="lazy" onerror="this.hidden=true">
+        <div class="card-body">
+          <p class="meta"><span>{% include icon.html name="user" %}{{ n.author }}</span><span>{% include icon.html name="calendar" %}{{ n.date }}</span></p>
+          <h3>{% if n.link %}<a href="{{ n.link }}" target="_blank" rel="noopener">{{ n.title }}</a>{% else %}{{ n.title }}{% endif %}</h3>
+          <p>{{ n.text }}</p>
+          {%- if n.link %}<a class="read-more" href="{{ n.link }}" target="_blank" rel="noopener">Read more{% include icon.html name="external" %}</a>{% endif %}
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

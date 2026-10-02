@@ -113,3 +113,32 @@ content:
       - name: body
         label: Page content
         type: rich-text
+
+  - name: news
+    label: News & Announcements
+    type: file
+    path: _data/news.yml
+    format: yaml
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date as shown (e.g. 23 July 2025)
+        type: string
+        required: true
+      - name: author
+        label: Posted by
+        type: string
+      - name: image
+        label: Photo
+        type: image
+      - name: text
+        label: Text
+        type: text
+        required: true
+      - name: link
+        label: Link (optional, adds a Read more button)
+        type: string
