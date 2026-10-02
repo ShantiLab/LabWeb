@@ -57,6 +57,7 @@
 
 
 <link rel="stylesheet" type="text/css" href="css/custom.css"/>
+<script>if(/\/index\.html$/.test(location.pathname))history.replaceState(null,"",location.pathname.replace(/index\.html$/,"")+location.search+location.hash);</script>
 </head>
 
 
@@ -88,7 +89,7 @@
                                 <div class="site-navigation d-flex flex-row">
                                     <!-- site-branding -->
                                     <div class="site-branding mr-auto">
-                                        <a class="home-link" href="index.html" title="SSS LAB" rel="home">
+                                        <a class="home-link" href="/" title="SSS LAB" rel="home">
                                             <img id="logo-img" class="img-center" src="images/SSSLOGO.svg" alt="SSS LAB LOGO">
                                         </a>
                                     </div><!-- site-branding end -->
@@ -101,7 +102,7 @@
                                     <nav class="main-menu menu-mobile" id="menu">
                                         <ul class="menu">
                                             <li class="mega-menu-item">
-                                                <a href="index.html" class="mega-menu-link">Home</a>
+                                                <a href="/" class="mega-menu-link">Home</a>
                                                 <ul class="mega-submenu">
                                                     
                                                 </ul>
@@ -202,7 +203,7 @@
                             </div>
                             <div class="breadcrumb-wrapper">
                                 <span>
-                                    <a title="Homepage" href="index.html">Home</a>
+                                    <a title="Homepage" href="/">Home</a>
                                 </span>
                                 <span><a href="team.html">Team</a></span>
                                 <span>Dr. Avishek Kar</span>

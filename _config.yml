@@ -30,7 +30,7 @@ lab:
 # Main menu. "children" makes a dropdown.
 nav:
   - title: Home
-    url: index.html
+    url: /
   - title: Publications
     url: publications.html
   - title: Team

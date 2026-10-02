@@ -1,5 +1,5 @@
 {%- assign here = page.url | remove_first: "/" -%}
-{%- if here == "" %}{% assign here = "index.html" %}{% endif -%}
+{%- if here == "" or here == "index.html" %}{% assign here = "/" %}{% endif -%}
 {%- if page.collection == "people" %}{% assign here = "team.html" %}{% endif -%}
 <a class="skip-link" href="#main">Skip to content</a>
 
