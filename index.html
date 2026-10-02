@@ -57,7 +57,7 @@
 
 
 <link rel="stylesheet" type="text/css" href="css/custom.css"/>
-<script>if(/\/index\.html$/.test(location.pathname))history.replaceState(null,"",location.pathname.replace(/index\.html$/,"")+location.search+location.hash);</script>
+<script>if(/\.html$/.test(location.pathname))history.replaceState(null,"",location.pathname.replace(/(\/index)?\.html$/,"").replace(/^$/,"/")+location.search+location.hash);</script>
 </head>
 
 
@@ -107,23 +107,23 @@
                                                     
                                                 </ul>
                                            <li class="menu-item">
-    <a href="publications.html" class="menu-link">Publications</a>
+    <a href="/publications" class="menu-link">Publications</a>
 </li>
                                             <li>
-    <a href="team.html">Team</a>
+    <a href="/team">Team</a>
 </li>
 
                                             <li class="mega-menu-item">
                                                 <a href="" class="mega-menu-link">Research</a>
                                                 <ul class="mega-submenu">
-                                                    <li class="gh-gt"><a href="gh-gt.html">GH & GT</a></li>
-                                                    <li class="bacterial-immunity"><a href="bacterial-immunity.html">Bacterial Innate Immunity </a></li>
-                                                    <li class="pp2a.html"><a href="pp2a.html">PP2a</a></li>
-                                                    <li class="coming-soon"><a href="coming-soon.html">Protocols</a></li>
+                                                    <li class="gh-gt"><a href="/gh-gt">GH & GT</a></li>
+                                                    <li class="bacterial-immunity"><a href="/bacterial-immunity">Bacterial Innate Immunity </a></li>
+                                                    <li class="pp2a.html"><a href="/pp2a">PP2a</a></li>
+                                                    <li class="coming-soon"><a href="/coming-soon">Protocols</a></li>
                                                 </ul>
                                             </li>
                                             <li class="mega-menu-item">
-                                                <a href="contact.html" class="mega-menu-link">Contact Us</a>
+                                                <a href="/contact" class="mega-menu-link">Contact Us</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -288,7 +288,7 @@
                             data-responsive_offset="on">Together, exploring life’s building blocks.
                         </div>    
                          <!-- LAYER NR. 4 -->
-                         <a class="tp-caption ttm-btn ttm-btn-shape-rounded ttm-btn-style-fill ttm-icon-btn-right ttm-btn-color-skincolor" href="announcements.html" target="_self" id="slide-7-layer-4" data-x="['left','left','left','left']" data-hoffset="['50','40','30','20']" data-y="['bottom','bottom','bottom','middle']" data-voffset="['176','176','89','70']" 
+                         <a class="tp-caption ttm-btn ttm-btn-shape-rounded ttm-btn-style-fill ttm-icon-btn-right ttm-btn-color-skincolor" href="/announcements" target="_self" id="slide-7-layer-4" data-x="['left','left','left','left']" data-hoffset="['50','40','30','20']" data-y="['bottom','bottom','bottom','middle']" data-voffset="['176','176','89','70']" 
 
                          data-fontsize="['15','15','15','15']"
                          data-lineheight="['20','20','18','18']"
@@ -469,18 +469,18 @@
                                             <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
                                                 <!-- featured-thumbnail -->
                                                 <div class="featured-thumbnail">
-                                                    <a href="gh-gt.html"> <img class="img-fluid" src="images/portfolio/06.jpg" alt="image"></a>
+                                                    <a href="/gh-gt"> <img class="img-fluid" src="images/portfolio/06.jpg" alt="image"></a>
                                                 </div><!-- featured-thumbnail end-->
                                                 <div class="featured-iconbox ttm-media-link">
                                                     <a class="ttm_prettyphoto ttm_image" title="GH 95" data-rel="prettyPhoto" href="images/portfolio/06.jpg">
                                                         <i class="fa fa-expand"></i>
                                                     </a>
-                                                    <a href="gh-gt.html" class="ttm_link"><i class="ti ti-link"></i></a>
+                                                    <a href="/gh-gt" class="ttm_link"><i class="ti ti-link"></i></a>
                                                 </div>
                                                 <div class="ttm-box-view-content-inner">
                                                     <div class="featured-content featured-content-portfolio">
                                                         <div class="featured-title">
-                                                            <h5><a href="gh-gt.html">Glycoside Hydrolases</a></h5>
+                                                            <h5><a href="/gh-gt">Glycoside Hydrolases</a></h5>
                                                         </div>
                                                         <span class="category"></span>
                                                     </div>
@@ -495,18 +495,18 @@
                                             <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
                                                 <!-- featured-thumbnail -->
                                                 <div class="featured-thumbnail">
-                                                    <a href="pp2a.html"> <img class="img-fluid" src="images/portfolio/07.jpg" alt="image"></a>
+                                                    <a href="/pp2a"> <img class="img-fluid" src="images/portfolio/07.jpg" alt="image"></a>
                                                 </div><!-- featured-thumbnail end-->
                                                 <div class="featured-iconbox ttm-media-link">
                                                     <a class="ttm_prettyphoto ttm_image" title="PP2A" data-rel="prettyPhoto" href="images/portfolio/07.jpg">
                                                         <i class="fa fa-expand"></i>
                                                     </a>
-                                                    <a href="pp2a.html" class="ttm_link"><i class="ti ti-link"></i></a>
+                                                    <a href="/pp2a" class="ttm_link"><i class="ti ti-link"></i></a>
                                                 </div>
                                                 <div class="ttm-box-view-content-inner">
                                                     <div class="featured-content featured-content-portfolio">
                                                         <div class="featured-title">
-                                                            <h5><a href="pp2a.html">PP2A in Focus</a></h5>
+                                                            <h5><a href="/pp2a">PP2A in Focus</a></h5>
                                                         </div>
                                                         <span class="category"></span>
                                                     </div>
@@ -521,18 +521,18 @@
                                             <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
                                                 <!-- featured-thumbnail -->
                                                 <div class="featured-thumbnail">
-                                                    <a href="bacterial-immunity.html"> <img class="img-fluid" src="images/portfolio/08.jpg" alt="image"></a>
+                                                    <a href="/bacterial-immunity"> <img class="img-fluid" src="images/portfolio/08.jpg" alt="image"></a>
                                                 </div><!-- featured-thumbnail end-->
                                                 <div class="featured-iconbox ttm-media-link">
                                                     <a class="ttm_prettyphoto ttm_image" title="St" data-rel="prettyPhoto" href="images/portfolio/08.jpg">
                                                         <i class="fa fa-expand"></i>
                                                     </a>
-                                                    <a href="bacterial-immunity.html" class="ttm_link"><i class="ti ti-link"></i></a>
+                                                    <a href="/bacterial-immunity" class="ttm_link"><i class="ti ti-link"></i></a>
                                                 </div>
                                                 <div class="ttm-box-view-content-inner">
                                                     <div class="featured-content featured-content-portfolio">
                                                         <div class="featured-title">
-                                                            <h5><a href="bacterial-immunity.html">Decoding Bacterial Innate Immune Systems</a></h5>
+                                                            <h5><a href="/bacterial-immunity">Decoding Bacterial Innate Immune Systems</a></h5>
                                                         </div>
                                                         <span class="category"></span>
                                                     </div>
@@ -927,7 +927,7 @@
 						</div>
 						<ul>
 							<li><a href="https://www.iiserbpr.ac.in/people/profile/shanti">IISER Bpr Website</a></li>
-							<li><a href="publications.html">Publications</a></li>
+							<li><a href="/publications">Publications</a></li>
 							<li><a href="https://www.instagram.com/iiserbpr_official/p/C4XCxH0sGFO/">Social</a></li>
 						
 						</ul>

@@ -5,22 +5,22 @@ current:
 - name: Rohit Sen
   role: PhD Student (SRF) JAN 2023
   photo: images/team-member/rohit.jpg
-  page: rohit.html
+  page: /rohit
   linkedin: https://in.linkedin.com/in/rohit-sen-159528186
 - name: Subhangi Subudhi
   role: PhD Student (SRF) AUG 2023
   photo: images/team-member/subhangi.jpg
-  page: subhangi.html
+  page: /subhangi
   linkedin: https://in.linkedin.com/in/subhangi-subudhi-0320981aa
 - name: Dr. Avishek Kar
   role: ANRF- National Post Doctoral Fellow
   photo: images/team-member/avi.jpg
-  page: avishek.html
+  page: /avishek
   linkedin: https://in.linkedin.com/in/avishekar
 - name: Huda Abdul Jaleel
   role: PhD Student (JRF) JAN 2026
   photo: images/team-member/Hudaa.jpg
-  page: huda.html
+  page: /huda
   linkedin: https://in.linkedin.com/in/huda-jaleel
 - name: Munna Ram Gurjar
   role: iPhD Student
@@ -49,24 +49,24 @@ former:
 - name: Shraddha Dhuruwe
   role: Junior Research Fellow
   photo: images/team-member/shrad.jpg
-  page: shraddha.html
+  page: /shraddha
 - name: Hiranmoy Adak
   role: Alumni
   photo: images/team-member/hiranmoy.jpg
-  page: hiranmoy.html
+  page: /hiranmoy
   linkedin: https://in.linkedin.com/in/hiranmoy-adak-388aba221
 - name: Siddhant Raj Naik
   role: BS-MS Dissertation Student (2025)
   photo: images/team-member/siddhant.jpg
-  page: siddhant.html
+  page: /siddhant
 - name: Shashank Raj
   role: BS-MS Dissertation Student (2025)
   photo: images/team-member/sas.jpg
-  page: shashank.html
+  page: /shashank
 - name: Jyoti Ranjan
   role: Junior Research Fellow
   photo: images/team-member/jyoti.jpg
-  page: jyoti.html
+  page: /jyoti
 - name: Manisha Manaswini
   role: BS-MS Dissertation Student (2024)
   photo: images/team-member/manisha.jpg

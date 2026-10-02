@@ -5,11 +5,12 @@
 {%- else %}
 <title>{{ site.title }} | {{ site.tagline }}</title>
 {%- endif %}
-{% seo title=false %}
+{%- capture seo_tags %}{% seo title=false %}{% endcapture -%}
+{{ seo_tags | replace: '.html"', '"' | replace: '/index"', '/"' }}
 <link rel="icon" href="{{ '/images/favicon.png' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
-<script>if(/\/index\.html$/.test(location.pathname))history.replaceState(null,"",location.pathname.replace(/index\.html$/,"")+location.search+location.hash);</script>
+<script>if(/\.html$/.test(location.pathname))history.replaceState(null,"",location.pathname.replace(/(\/index)?\.html$/,"").replace(/^$/,"/")+location.search+location.hash);</script>

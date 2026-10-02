@@ -32,21 +32,21 @@ nav:
   - title: Home
     url: /
   - title: Publications
-    url: publications.html
+    url: /publications
   - title: Team
-    url: team.html
+    url: /team
   - title: Research
     children:
       - title: Glycoside Hydrolases & Glycosyl Transferases
-        url: gh-gt.html
+        url: /gh-gt
       - title: Bacterial Innate Immunity
-        url: bacterial-immunity.html
+        url: /bacterial-immunity
       - title: PP2A
-        url: pp2a.html
+        url: /pp2a
       - title: Protocols
-        url: coming-soon.html
+        url: /coming-soon
   - title: Contact Us
-    url: contact.html
+    url: /contact
 
 # Profile pages (one Markdown file per person in _people/) and
 # research project pages (one file per project in _research/).

@@ -64,7 +64,7 @@ content:
             label: Photo
             type: image
           - name: page
-            label: Profile page (e.g. rohit.html, leave empty if none)
+            label: Profile page (e.g. /rohit, leave empty if none)
             type: string
           - name: linkedin
             label: LinkedIn link

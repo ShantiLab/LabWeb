@@ -57,7 +57,7 @@
 
 
 <link rel="stylesheet" type="text/css" href="css/custom.css"/>
-<script>if(/\/index\.html$/.test(location.pathname))history.replaceState(null,"",location.pathname.replace(/index\.html$/,"")+location.search+location.hash);</script>
+<script>if(/\.html$/.test(location.pathname))history.replaceState(null,"",location.pathname.replace(/(\/index)?\.html$/,"").replace(/^$/,"/")+location.search+location.hash);</script>
 </head>
 
 
@@ -107,23 +107,23 @@
                                                     
                                                 </ul>
                                            <li class="menu-item">
-    <a href="publications.html" class="menu-link">Publications</a>
+    <a href="/publications" class="menu-link">Publications</a>
 </li>
                                             <li>
-    <a href="team.html">Team</a>
+    <a href="/team">Team</a>
 </li>
 
                                             <li class="mega-menu-item">
                                                 <a href="" class="mega-menu-link">Research</a>
                                                 <ul class="mega-submenu">
-                                                    <li class="gh-gt"><a href="gh-gt.html">GH & GT</a></li>
-                                                    <li class="bacterial-immunity"><a href="bacterial-immunity.html">Bacterial Innate Immunity</a></li>
-                                                    <li class="pp2a.html"><a href="pp2a.html">PP2a</a></li>
-                                                    <li class="coming-soon"><a href="coming-soon.html">Protocols</a></li>
+                                                    <li class="gh-gt"><a href="/gh-gt">GH & GT</a></li>
+                                                    <li class="bacterial-immunity"><a href="/bacterial-immunity">Bacterial Innate Immunity</a></li>
+                                                    <li class="pp2a.html"><a href="/pp2a">PP2a</a></li>
+                                                    <li class="coming-soon"><a href="/coming-soon">Protocols</a></li>
                                                 </ul>
                                             </li>
                                             <li class="mega-menu-item">
-                                                <a href="contact.html" class="mega-menu-link">Contact Us</a>
+                                                <a href="/contact" class="mega-menu-link">Contact Us</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -204,7 +204,7 @@
                                 <span>
                                     <a title="Homepage" href="/">Home</a>
                                 </span>
-                                <span><a href="team.html">Team</a></span>
+                                <span><a href="/team">Team</a></span>
                                 <span>Huda Abdul Jaleel</span>
                             </div>
                         </div>
@@ -317,7 +317,7 @@
 						</div>
 						<ul>
 							<li><a href="https://www.iiserbpr.ac.in/people/profile/shanti">IISER Bpr Website</a></li>
-							<li><a href="publications.html">Publications</a></li>
+							<li><a href="/publications">Publications</a></li>
 							<li><a href="https://www.instagram.com/iiserbpr_official/p/C4XCxH0sGFO/">Social</a></li>
 						
 						</ul>
