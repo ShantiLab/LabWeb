@@ -551,6 +551,90 @@ textarea { resize: vertical; }
   .member-card p { font-size: 12.5px; }
 }
 
+/* ==========================================================================
+   Motion – subtle, GPU-friendly, and fully disabled for reduced-motion users
+   ========================================================================== */
+
+/* Smooth cross-fade between pages (Chrome/Edge/Safari; ignored elsewhere) */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: .22s ease both vt-out; }
+::view-transition-new(root) { animation: .32s ease both vt-in; }
+@keyframes vt-out { to { opacity: 0; } }
+@keyframes vt-in { from { opacity: 0; } }
+
+/* Scroll-reveal: elements fade/slide up once as they enter the viewport */
+.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s cubic-bezier(.2, .7, .2, 1), transform .7s cubic-bezier(.2, .7, .2, 1); transition-delay: var(--d, 0ms); will-change: opacity, transform; }
+.js .reveal.reveal-left { transform: translateX(-34px); }
+.js .reveal.reveal-right { transform: translateX(34px); }
+.js .reveal.reveal-zoom { transform: scale(.94); }
+.js .reveal.in { opacity: 1; transform: none; will-change: auto; }
+/* once revealed, hover transforms/shadows on cards stay snappy */
+.js .card.reveal.in { transition: transform .3s, box-shadow .3s, opacity .7s; transition-delay: 0s; }
+
+/* Hero: headline, tagline and button rise in on load; video fades in */
+.hero-video { animation: hero-fade 1.4s ease both; }
+.hero h1, .hero p, .hero-btn { animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; }
+.hero h1 { animation-delay: .15s; }
+.hero p { animation-delay: .35s; }
+.hero-btn { animation-delay: .55s; }
+@keyframes rise { from { opacity: 0; transform: translateY(28px); } }
+@keyframes hero-fade { from { opacity: 0; } }
+
+/* Page-title banners and research hero */
+.page-title h1, .page-title .breadcrumb, .research-hero > .container > * { animation: rise .8s cubic-bezier(.2, .7, .2, 1) both; }
+.page-title .breadcrumb { animation-delay: .12s; }
+.research-hero .pill { animation-delay: .05s; }
+.research-hero h1 { animation-delay: .15s; }
+.research-hero p { animation-delay: .3s; }
+
+/* Logo eases on hover */
+.brand img { transition: transform .3s ease; }
+.brand:hover img { transform: scale(1.04); }
+
+/* Buttons: arrow nudges, soft press */
+.btn .icon, .hero-btn svg { transition: transform .25s ease; }
+.btn:hover .icon-arrow, .hero-btn:hover svg { transform: translateX(4px); }
+.btn:active, .hero-btn:active { transform: translateY(1px) scale(.985); }
+
+/* Text links: underline draws from the left */
+.prose a, .footer-col a, .footer-bottom-links a, .info-list a {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  transition: background-size .3s ease, color .2s;
+}
+.prose a:hover, .footer-col a:hover, .footer-bottom-links a:hover, .info-list a:hover { background-size: 100% 1px; }
+
+/* Cards: soft blue glow on hover for key cards */
+.project-card:hover, .pub-card:hover, .news-card:hover { box-shadow: 0 18px 40px rgba(51, 104, 198, .18); }
+.about-points li { transition: transform .3s, background .25s, border-color .25s, box-shadow .25s; }
+.about-points li:hover { transform: translateX(6px); }
+.step-num { transition: transform .35s cubic-bezier(.3, 1.6, .5, 1); }
+.about-points li:hover .step-num { transform: scale(1.12) rotate(-6deg); }
+.member-linkedin { transition: opacity .25s, transform .25s cubic-bezier(.3, 1.6, .5, 1), background .2s; }
+
+/* Funding logos */
+.funders img { transition: transform .3s ease, opacity .3s; opacity: .9; }
+.funders img:hover { transform: translateY(-4px) scale(1.05); opacity: 1; }
+
+/* Footer illustration floats gently */
+.footer-cta-art img { animation: float 6s ease-in-out infinite; }
+@keyframes float { 50% { transform: translateY(-10px); } }
+
+/* Scroll progress bar along the top (CSS-only, where supported) */
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60;
+    background: linear-gradient(90deg, var(--primary), #7b9be0);
+    transform-origin: 0 50%; transform: scaleX(0);
+    animation: grow linear both; animation-timeline: scroll(root block);
+  }
+  @keyframes grow { to { transform: scaleX(1); } }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; }
+  @view-transition { navigation: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }

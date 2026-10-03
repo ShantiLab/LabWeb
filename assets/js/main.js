@@ -119,4 +119,81 @@
     $(".lightbox-close", box).addEventListener("click", function () { box.close(); });
     box.addEventListener("click", function (e) { if (e.target === box) box.close(); });
   }
+  // ----- Motion -----
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Scroll progress bar (styled in CSS; only shows where scroll-driven animations are supported)
+  var bar = document.createElement("div");
+  bar.className = "scroll-progress";
+  bar.setAttribute("aria-hidden", "true");
+  document.body.appendChild(bar);
+
+  // Scroll reveal: tag elements automatically, then reveal as they enter the viewport
+  if (!reduce && "IntersectionObserver" in window) {
+    var groups = [
+      [".section-head", "reveal"],
+      [".about-media", "reveal reveal-left"],
+      [".about-text", "reveal reveal-right"],
+      [".split-media", "reveal reveal-left"],
+      [".split-text", "reveal reveal-right"],
+      [".location-text", "reveal reveal-right"],
+      [".profile-card", "reveal reveal-left"],
+      [".profile-main", "reveal reveal-right"],
+      [".research-body", "reveal"],
+      [".research-facts", "reveal reveal-right"],
+      [".contact-head", "reveal"],
+      [".map-card", "reveal reveal-zoom"],
+      [".funders", "reveal reveal-zoom"],
+      [".year-heading", "reveal"],
+      [".featured-news", "reveal reveal-zoom"],
+      [".footer-cta", "reveal reveal-zoom"],
+      [".footer-card", "reveal"],
+      [".carousel", "reveal"]
+    ];
+    var staggered = [".grid > *", ".about-points > li", ".gallery > *", ".contact-grid .panel", ".contact-side > *", ".info-list > li"];
+    var targets = [];
+    groups.forEach(function (g) {
+      $$(g[0]).forEach(function (el) { el.className += " " + g[1]; targets.push(el); });
+    });
+    staggered.forEach(function (sel) {
+      $$(sel).forEach(function (el) {
+        if (el.classList.contains("reveal") || el.closest(".carousel")) return;
+        var sibs = Array.prototype.slice.call(el.parentElement.children);
+        el.style.setProperty("--d", Math.min(sibs.indexOf(el), 5) * 80 + "ms");
+        el.className += " reveal";
+        targets.push(el);
+      });
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    // start hidden without animating, so already-visible content doesn't flash
+    targets.forEach(function (el) { el.style.transition = "none"; });
+    void document.body.offsetHeight;
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        targets.forEach(function (el) { el.style.transition = ""; io.observe(el); });
+      });
+    });
+    // safety net: never leave content hidden
+    setTimeout(function () { targets.forEach(function (el) { el.classList.add("in"); }); }, 6000);
+  }
+
+  // Gentle 3D tilt on cards (mouse only, small angle)
+  if (!reduce && window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    $$(".member-card, .project-card, .pub-card, .news-card").forEach(function (card) {
+      card.addEventListener("mousemove", function (e) {
+        var r = card.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transition = "transform .08s linear, box-shadow .3s";
+        card.style.transform = "perspective(900px) rotateX(" + (-y * 5).toFixed(2) + "deg) rotateY(" + (x * 6).toFixed(2) + "deg) translateY(-6px)";
+      });
+      card.addEventListener("mouseleave", function () {
+        card.style.transition = "transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .3s";
+        card.style.transform = "";
+      });
+    });
+  }
 })();

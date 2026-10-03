@@ -7,6 +7,7 @@
 {%- endif %}
 {%- capture seo_tags %}{% seo title=false %}{% endcapture -%}
 {{ seo_tags | replace: '.html"', '"' | replace: '/index"', '/"' }}
+<script>document.documentElement.classList.add("js")</script>
 <link rel="icon" href="{{ '/images/favicon.png' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
