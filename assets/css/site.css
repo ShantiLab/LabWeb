@@ -426,7 +426,7 @@ textarea { resize: vertical; }
 /* ---------- Footer ---------- */
 .site-footer { background: #eef3fb; margin-top: 120px; padding: 0 0 40px; position: relative; }
 .footer-cta {
-  position: relative; z-index: 2; transform: translateY(-90px); margin-bottom: -90px;
+  position: relative; z-index: 2; top: -90px; margin-bottom: -90px;
   background: var(--primary); border-radius: 18px; color: #fff;
   display: grid; grid-template-columns: 1fr 1.15fr; align-items: center; gap: 30px;
   padding: 40px 56px; box-shadow: 0 24px 50px rgba(51, 104, 198, .28);
